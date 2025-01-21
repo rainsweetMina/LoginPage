@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="362.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.loginpage.ListController">
+   <children>
+      <Label layoutX="143.0" layoutY="22.0" text="회원목록보기">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" editable="true" layoutX="28.0" layoutY="66.0" prefHeight="263.0" prefWidth="370.0">
+        <columns>
+          <TableColumn fx:id="tvName" prefWidth="75.0" text="이름" />
+          <TableColumn fx:id="tvId" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="tvPw" prefWidth="75.0" text="PW" />
+            <TableColumn fx:id="tvEmail" prefWidth="75.0" text="Email" />
+        </columns>
+      </TableView>
+      <Pagination layoutX="82.0" layoutY="329.0" prefHeight="48.0" prefWidth="263.0" />
+   </children>
+</AnchorPane>
