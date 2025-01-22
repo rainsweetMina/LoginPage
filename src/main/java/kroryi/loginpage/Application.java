@@ -1,11 +1,9 @@
 package kroryi.loginpage;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import kroryi.loginpage.Service.CommService;
+import kroryi.loginpage.Service.CommonServiceImpl;
 import javafx.stage.Stage;
-
-import java.io.IOException;
+import kroryi.loginpage.Dao.MyDB;
 
 public class Application extends javafx.application.Application {
 
@@ -15,8 +13,14 @@ public class Application extends javafx.application.Application {
 
 
         try {
-            CommService commService = new CommonServiceImpl(stage);
-            commService.showLoginPage("login-view.fxml");
+//            CommService commService = new CommonServiceImpl(stage);
+//            commService.showExamplePage("example.fxml");
+//            commService.showLoginPage("login-view.fxml");
+//            commService.showListPage("list-view.fxml");
+            SceneManager.setPrimaryState(stage);
+            SceneManager.switchScene("login-view.fxml","샘플");
+
+
         }catch (Exception e){
             e.printStackTrace();
         }

@@ -1,4 +1,4 @@
-package kroryi.loginpage;
+package kroryi.loginpage.Controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,8 +11,12 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import javafx.scene.input.MouseEvent;
+import kroryi.loginpage.Service.CommService;
+import kroryi.loginpage.Service.LoginService;
+import kroryi.loginpage.Dao.Member;
+import kroryi.loginpage.Dao.MyDB;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 

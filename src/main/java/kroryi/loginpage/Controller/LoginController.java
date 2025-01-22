@@ -1,13 +1,17 @@
-package kroryi.loginpage;
+package kroryi.loginpage.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import kroryi.loginpage.SceneManager;
+import kroryi.loginpage.Service.CommService;
+import kroryi.loginpage.Service.CommonServiceImpl;
+import kroryi.loginpage.Service.LoginService;
+import kroryi.loginpage.Service.LoginServiceImpl;
 
 import java.io.IOException;
 
@@ -28,7 +32,6 @@ public class LoginController {
     private Scene scene;
     private Parent root;
 
-    private CommService commService;
     private LoginService loginService;
 
     public  void setRoot(Parent root) {
@@ -64,8 +67,8 @@ public class LoginController {
     @FXML
     protected void onResignBtnClick(ActionEvent event) throws IOException {
         System.out.println("회원가입 버튼 실행");
-        commService = new CommonServiceImpl(stage);
-        commService.showRegisterPage("register-view.fxml");
+//        SceneManager.setPrimaryState(stage);
+        SceneManager.switchScene("register-view.fxml","회원가입 화면");
 
     }
 

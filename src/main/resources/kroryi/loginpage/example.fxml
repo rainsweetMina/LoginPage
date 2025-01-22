@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane prefHeight="616.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.loginpage.Controller.ExampleController">
+
+   <children>
+      <fx:include source="menu-bar.fxml"/>
+   </children>
+
+
+   <children>
+      <ImageView fx:id="dogImageView" fitHeight="264.0" fitWidth="303.0" layoutX="23.0" layoutY="112.0" onDragDetected="#handleChangeImage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/dog.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="dogChangeBtn" layoutX="545.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleChangeImage" prefHeight="52.0" prefWidth="122.0" text="그림 바꾸기" />
+      <Button layoutX="346.0" layoutY="112.0" mnemonicParsing="false" onAction="#handlerStartAnimation" prefHeight="37.0" prefWidth="77.0" text="시작" />
+      <Button layoutX="445.0" layoutY="112.0" mnemonicParsing="false" onAction="#handlerStopAnimation" prefHeight="37.0" prefWidth="77.0" text="중지" />
+      <ColorPicker fx:id="colorPicker" layoutX="485.0" layoutY="313.0" prefHeight="24.0" prefWidth="172.0" />
+      <Circle fx:id="circle" fill="DODGERBLUE" layoutX="567.0" layoutY="442.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Slider fx:id="slider" layoutX="485.0" layoutY="550.0" prefHeight="14.0" prefWidth="172.0" />
+      <Label fx:id="valueLabel" layoutX="556.0" layoutY="572.0" text="Label" />
+      <TextArea fx:id="textArea" layoutX="23.0" layoutY="331.0" prefHeight="255.0" prefWidth="303.0" text="최근 인천국제공항공사는 인천공항과 미국 &#10;올랜도를 잇는 신규 직항노선을 개설하기 위해 올랜도공항, 올랜도 시가 속한 오세올라 카운티와 마케팅 파트너십 협약을 체결했다.&#10;협약식에는 이학재 인천공항공사 사장과 케빈 티보 올랜도공항 사장, 셰릴 그리브 오세올라 카운티 의원 등이 참석해 상호 협력을&#10; 다짐했다. 양측은 직항 노선 개설 시 초기 운영 지원, 공동 마케팅 및 인센티브 제공, 항공·공항 산업 동향 교류 등 다양한 분야에서 협력하기로 합의했다.&#10;&#10;현재 인천공항과 올랜도를 잇는 직항 노선은&#10; 없으며, 동북아-플로리다를 오가는 여행객&#10;들은 애틀랜타, 디트로이트 등 미국의 다른 공&#10;항을 경유해야 한다. 지난해 약 2만 명이&#10; 인천-올랜도 노선을, 약 5만 3000명이 인천-플로리다 노선을 이용했으며, 경유로 인한 불편이 지속적으로 제기돼 왔다.&#10;최근 인천국제공항공사는 인천공항과&#10; 미국 올랜도를 잇는 신규 직항노선을 개설하기 위해 올랜도공항, 올랜도 시가 속한 오세올라 카운티와 마케팅 파트너십 협약을 체결했다.&#10;&#10;협약식에는 이학재 인천공항공사 사장&#10;과 케빈 티보 올랜도공항 사장, 셰릴 그리브 오세올라 카운티 의원 등이 참석해 상호 협력을 다짐했다. 양측은 직항 노선 개설 시 초기 운영 지원, 공동 마케팅 및 인센티브 제공, 항공·공항 산업 동향 교류 등 다양한 분야에서 협력하기로 합의했다.&#10;&#10;현재 인천공항과 올랜도를 잇는 직&#10;항 노선은 없으며, 동북아-플로리다를 &#10;오가는 여행객들은 애틀랜타, 디트로이&#10;트 등 미국의 다른 공항을 경유해야 한다&#10;&#10;. 지난해 약 2만 명이 인천-올랜도 노선을&#10;, 약 5만 3000명이 인천-플로리다 노선을 이용했으며, 경유로 인한 불편이 지속적으로 제기돼 왔다." />
+      <ScrollBar fx:id="vScrollBar" layoutX="691.0" layoutY="41.0" orientation="VERTICAL" prefHeight="581.0" prefWidth="14.0" />
+   </children>
+</AnchorPane>
