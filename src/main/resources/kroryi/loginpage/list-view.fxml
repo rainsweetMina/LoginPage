@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Pagination?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
+<AnchorPane prefHeight="380.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.loginpage.Controller.ListController">
+    <children>
+        <fx:include source="menu-bar.fxml" />
+    </children>
 
-<AnchorPane prefHeight="362.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.loginpage.ListController">
-   <children>
-      <Label layoutX="143.0" layoutY="22.0" text="회원목록보기">
+    <children>
+      <Label layoutX="394.0" layoutY="36.0" prefHeight="26.0" prefWidth="140.0" text="회원목록보기">
          <font>
-            <Font size="24.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <TableView fx:id="tableView" editable="true" layoutX="28.0" layoutY="66.0" prefHeight="263.0" prefWidth="370.0">
+      <TableView fx:id="tableView" editable="true" layoutX="275.0" layoutY="84.0" prefHeight="234.0" prefWidth="382.0">
         <columns>
-          <TableColumn fx:id="tvName" prefWidth="75.0" text="이름" />
-          <TableColumn fx:id="tvId" prefWidth="75.0" text="ID" />
-            <TableColumn fx:id="tvPw" prefWidth="75.0" text="PW" />
-            <TableColumn fx:id="tvEmail" prefWidth="75.0" text="Email" />
+          <TableColumn fx:id="colName" prefWidth="75.0" text="이름" />
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colPw" prefWidth="75.0" text="PW" />
+            <TableColumn fx:id="colEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="colCheckBox" prefWidth="75.0" text="삭제">
+               <graphic>
+                  <CheckBox fx:id="chkCheckBox" mnemonicParsing="false" prefHeight="16.0" prefWidth="58.0" text="All" />
+               </graphic>
+            </TableColumn>
         </columns>
       </TableView>
-      <Pagination layoutX="82.0" layoutY="329.0" prefHeight="48.0" prefWidth="263.0" />
+      <Pagination fx:id="pagination" layoutX="294.0" layoutY="318.0" maxPageIndicatorCount="5" prefHeight="45.0" prefWidth="344.0" />
+      <Label layoutX="26.0" layoutY="89.0" text=" 이름:" />
+      <TextField fx:id="tfName" layoutX="74.0" layoutY="85.0" promptText="이름 입력" />
+      <Label layoutX="32.0" layoutY="124.0" text="ID:" />
+      <TextField fx:id="tfId" layoutX="74.0" layoutY="120.0" promptText="ID  입력" />
+      <Label layoutX="25.0" layoutY="187.0" text="Email:" />
+      <TextField fx:id="pfPw" layoutX="74.0" layoutY="151.0" promptText="비번 입력" />
+      <Label layoutX="27.0" layoutY="155.0" text="비번:" />
+      <TextField fx:id="tfEmail" layoutX="74.0" layoutY="183.0" promptText="메일 입력" />
+      <Button layoutX="122.0" layoutY="220.0" mnemonicParsing="false" onAction="#memberAdd" text="등록" />
+      <Label layoutX="95.0" layoutY="49.0" prefHeight="26.0" prefWidth="93.0" text="회원 등록">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="275.0" layoutY="38.0" mnemonicParsing="false" onAction="#refreshTableView" text="새로고침" />
+      <FontAwesomeIconView glyphName="USER" layoutX="185.0" layoutY="74.0" size="36" />
+      <FontAwesomeIconView fill="BLUE" glyphName="SEND" layoutX="211.0" layoutY="301.0" size="20" />
+      <FontAwesomeIconView glyphName="HOME" layoutX="73.0" layoutY="311.0" size="48" text="" />
    </children>
 </AnchorPane>

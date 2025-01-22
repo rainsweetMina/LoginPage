@@ -7,7 +7,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="439.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.loginpage.RegisterControllor">
+<AnchorPane prefHeight="439.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kroryi.loginpage.Controller.RegisterControllor">
+   <children>
+      <fx:include source="menu-bar.fxml"/>
+   </children>
    <children>
       <Label layoutX="137.0" layoutY="25.0" text="회원가입 화면" textFill="#545454">
          <font>
